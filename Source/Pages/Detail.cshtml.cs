@@ -11,9 +11,9 @@ namespace BigStarCollectiblesWebApp {
 		public void OnGet(int id) {
 
 			//CurrentTourStop = new TailorMadeTours.Models.TourSource().TourStops.FirstOrDefault(x => x.StopNumber == stopNumber);
-			MonsterCard = new CardSource().CollectibleCards.FirstOrDefault(x => x.Id == id);
+			CurrentCard = new CardSource().CollectibleCards.FirstOrDefault(x => x.Id == id);
 		}
 
-		public CollectableCard MonsterCard { get; set; }
+		public CollectableCard CurrentCard { get; set; }
 	}
 }

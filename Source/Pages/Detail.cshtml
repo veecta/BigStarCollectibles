@@ -12,16 +12,16 @@ We have this rare card in stock. Get yours today!
 	<div class="card  ">
 		<div class=" card-header">
 
-			<h4 class="card-title text-secondary">@Model.MonsterCard.Name</h4>
+			<h4 class="card-title text-secondary">@Model.CurrentCard.Name</h4>
 		</div>
-		<img class="card-img-top" style="width:80%;object-fit:cover" src="@Url.Content("~/Images/" + Model.MonsterCard.ImageUri)" alt="Card image">
+		<img class="card-img-top" style="width:80%;object-fit:cover" src="@Url.Content("~/Images/" + Model.CurrentCard.ImageUri)" alt="Card image">
 
 		<div class="card-body">
-			<div class="card-text px-2 ">@Model.MonsterCard.Description</div>
+			<div class="card-text px-2 ">@Model.CurrentCard.Description</div>
 		</div>
 		<div class="card-footer">
 			<div>
-				<p>Slogan: @Model.MonsterCard.Slogan</p>
+				<p>Slogan: @Model.CurrentCard.Slogan</p>
 			</div>
 		</div>
 	</div>
@@ -34,34 +34,33 @@ We have this rare card in stock. Get yours today!
 
 			<table class="table">
 				<tr>
-					<td>Eye Count: </td>
-					<td>@Model.MonsterCard.EyeCount</td>
-				</tr>
-				<tr>
-					<td>
-						Spikes:
-					</td>
-					<td>@(Model.MonsterCard.Spikes ? "yes" : "no")</td>
-				</tr>
-				<tr>
-					<td>
-						Antenna:
-					</td>
-					<td>@(Model.MonsterCard.Antenna ? "yes" : "no")</td>
-				</tr>
-
-				<tr>
 					<td>
 						Team:
 					</td>
-					<td>@Model.MonsterCard.TeamName</td>
+					<td>@Model.CurrentCard.TeamName</td>
 				</tr>
+				<tr>
+					<td>Eye Count: </td>
+					<td>@Model.CurrentCard.EyeCount</td>
+				</tr>
+
+				@foreach (var detail in Model.CurrentCard.Details)
+				{
+					<tr>
+						<td>
+							@detail.Key:
+						</td>
+						<td>
+							@detail.Value
+						</td>
+					</tr>
+				}
 			</table>
 
 
 		</div>
 		<div class="card-footer">
-			<p>Rank: @Model.MonsterCard.PopularityIndex </p>
+			<p>Rank: @Model.CurrentCard.PopularityIndex </p>
 		</div>
 	</div>
 
@@ -74,17 +73,17 @@ We have this rare card in stock. Get yours today!
 			<table class="table">
 				<tr>
 					<td>Catalog Price: </td>
-					<td>@Model.MonsterCard.CatalogPrice.ToString("C")</td>
+					<td>@Model.CurrentCard.CatalogPrice.ToString("C")</td>
 				</tr>
 				<tr>
 					<td>Bid Price: </td>
 
 					<td>
-						@Model.MonsterCard.BidPrice.ToString("C")
-						
+						@Model.CurrentCard.BidPrice.ToString("C")
+
 						<br />
-											
-					
+
+
 					</td>
 					<td>
 				</tr>
@@ -92,9 +91,9 @@ We have this rare card in stock. Get yours today!
 					<td>Your Price: </td>
 
 					<td>
-						@(Model.MonsterCard.SalePrice.ToString("C"))
+						@(Model.CurrentCard.SalePrice.ToString("C"))
 
-						@if (Model.MonsterCard.IsDiscounted)
+						@if (Model.CurrentCard.IsDiscounted)
 						{
 							<div class="badge badge-pill badge-success">Sale!</div>
 						}

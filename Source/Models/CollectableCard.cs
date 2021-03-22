@@ -4,15 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace BigStarCollectiblesWebApp.Models
+	
 {
 	public class CollectableCard
 	{
+
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public string Slogan { get; set; }
 		public int EyeCount { get; set; }
-		public bool Spikes { get; set; }
-		public bool Antenna { get; set; }
+
+		public Dictionary<string, string> Details { get; set; } = new Dictionary<string, string>();
+
 		public TeamNames TeamName { get; set; }
 
 		public string Description { get; set; }
@@ -67,4 +70,5 @@ namespace BigStarCollectiblesWebApp.Models
 		Farsiders,
 		SuperNovas
 	}
+	
 }
