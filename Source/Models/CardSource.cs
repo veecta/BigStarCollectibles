@@ -57,7 +57,7 @@ namespace BigStarCollectiblesWebApp.Models
 				Id = 103,
 				CardFamily = CardFamily.Monsters,
 				Name = "Squido",
-				Slogan = "Yodelay Hee Hoo!",
+				Slogan = "An Eye for Design",
 				EyeCount = 2,
 				CatalogPrice = 5.99M,
 				BidPrice = 6.95M,
@@ -377,7 +377,7 @@ namespace BigStarCollectiblesWebApp.Models
 				CatalogPrice = 6.99M,
 				BidPrice = 15.95M,
 				ImageUri = "Alien-Trisaphron-md.png",
-				Description = "As a mobility engineer, Celestia Dristi helps individuals and companies to improve personal and professional agility and growth in technology and systems. An expert in translating and implementing needs into functionality, Celestia Dristi has a unique proclivity for solving problems and helping to avoid future issues.",
+				Description = "Trisaphron earned a masters degree in practical operations from Omerania University after completing a bachelors of science in impractical mathematics. With a keen ability to watch and understand the nuances of cooperation among production robots, Trisaphron never hesitates to jump in and lend a hand or two or three to educate and improve procedures.",
 				PopularityIndex = 106,
 
 				TeamName = TeamNames.Helios,
@@ -399,7 +399,7 @@ namespace BigStarCollectiblesWebApp.Models
 				CatalogPrice = 4.99M,
 				BidPrice = 11.95M,
 				ImageUri = "Alien-Ichabod-md.png",
-				Description = "Operations supervisor Ichabod is unwavering in adherence to the perfection of order and function. Using inborn impassiveness to distracting influences, Ichabod has led several teams to operational distinction with the advantage of being able to successfully teach precise hoverboard maneuverability.     ",
+				Description = "Operations supervisor Ichabod is unwavering in adherence to the perfection of order and function. Using inborn impassiveness to distracting influences, Ichabod has led several teams to operational distinction with the advantage of being able to successfully teach precise hoverboard maneuverability.",
 				PopularityIndex = 429,
 
 				TeamName = TeamNames.Farsiders
@@ -412,7 +412,7 @@ namespace BigStarCollectiblesWebApp.Models
 
 			card = new CollectableCard
 			{
-				Id = 206,
+				Id = 209,
 				CardFamily = CardFamily.Aliens,
 				Name = "Seymour",
 				Slogan = "Planet: Pepinos IV",
